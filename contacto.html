@@ -12,9 +12,9 @@
     
   <!--MENU -->
  
-  <div class="container">
+ 
      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" >
-        <div class="container-fluid" >
+        <div class="container-fluid " >
           <a class="navbar-brand" href="index.html">Unidad 2 Bootstrap</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,31 +48,33 @@
           </div>
         </div>
       </nav>
- 
+
+
+      <div class="container mt-5 pt-5" style="background-color:lightgray">
       <div class="formulario">      
         <form class="needs-validation" novalidate>
             <div class="form-row">
-              <div class="col-md-4 mb-3">
+              <div class="col-md-5 mb-3">
                 <label for="validationTooltip01">Nombre</label>
                 <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Nombre" required>
                 <div class="valid-tooltip">
                   Looks good!
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
+              <div class="col-md-5 mb-3">
                 <label for="validationTooltip02">Apellido</label>
                 <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Apellido" required>
                 <div class="valid-tooltip">
                   Looks good!
                 </div>
               </div>
-              <div class="col-md-4 mb-3">
-                <label for="validationTooltipUsername">Usuario</label>
+              <div class="col-md-8 mb-3">
+                <label for="validationTooltipUsername">Mail</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
                   </div>
-                  <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                  <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Usuario" aria-describedby="validationTooltipUsernamePrepend" required>
                   <div class="invalid-tooltip">
                    Elige un usuario valido
                   </div>
@@ -82,12 +84,12 @@
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationTooltip03">Ciudad</label>
-                <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                <input type="text" class="form-control" id="validationTooltip03" placeholder="Ciudad" required>
                 <div class="invalid-tooltip">
                  Elige una ciudad valida
                 </div>
               </div>             
-              <div class="col-md-3 mb-3">
+              <div class="col-md-5 mb-5">
                 <label for="validationTooltip05">CP</label>
                 <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
                 <div class="invalid-tooltip">
