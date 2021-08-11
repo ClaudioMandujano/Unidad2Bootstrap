@@ -1,123 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link href="estilos.css" rel="stylesheet";
-    <title>Tarea Unidad 2 Bootstrap</title>
-</head>
-<body class="bg-dark">
+  <head>
     
-  <!--MENU -->
-     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" >
-        <div class="container-fluid" >
-          <a class="navbar-brand" href="index.html">Unidad 2 Bootstrap</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#card">Cartas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Nosotros
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="https://www.google.com/maps/search/google+maps/@-34.6199024,-58.3627212,16.25z">Mapa</a></li>
-                  <li><a class="dropdown-item" href="somos.html">Quienes Somos</a></li>                                                  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Unidad 2 Bootstrap</title>
 
-                </ul>
-              </li>                       
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-flex.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scroll -->    
+    <script src="js/smooth-scroll.min.js"></script>    
+    <script>
+      smoothScroll.init({
+      selector: '[data-scroll]', 
+      selectorHeader: null, 
+      speed: 2000, // Segundos en cambiar escena
+      easing: 'easeInOutCubic', // 
+      offset: 0, // separacion de pixeles 
+      callback: function ( anchor, toggle ) {} 
+      });
+    </script>
+    
+  </head>
+  <body>
+
+    <!-- MENÚ -->
+    
+ <div class="container-fluid navbar-fixed-top">
+      <div class="row justify-content-center flex-items-lg-left flex-items-xs-between menu-1 flex-items-xs-middle">
+        <div class="col-xs-2">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/bootstrap-logo.svg" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            Bootstrap
+          </a>
+        </div>        
+        <div class="col-xs-2">
+          <a data-scroll href="#sec-1" class="btn btn-danger" role="button" aria-pressed="true">Inicio</a>
         </div>
-      </nav>
-
-<!--INICIO DE SLIDE -->
-<div id="carouselExampleDark" class="carousel carousel-white slide" data-bs-ride="carousel" >
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="height: 45vh" data-bs-interval="10000">
-      <img src="imagenes/times3.jpg" class="d-block w-120" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Times Square</h5>
-        <p><b>El Times Square es una intersección de avenidas en Manhattan.</b></p>
+        <div class="col-xs-2">
+          <a data-scroll href="#sec-2" class="btn btn-danger" role="button" aria-pressed="true">Cards</a>
+        </div>
+        <div class="col-xs-2">
+          <a data-scroll href="#sec-3" class="btn btn-danger" role="button" aria-pressed="true">Servicios</a>
+        </div>
+        <div class="col-xs-2">
+          <a data-scroll href="#sec-4" class="btn btn-danger" role="button" aria-pressed="true">Contacto</a>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item" style="height: 45vh" data-bs-interval="2000">
-      <img src="imagenes/hd3.jpg" class="d-block w-120" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Colombia</h5>
-        <p><b>Es un país del extremo norte de Sudamérica. Su paisaje cuenta con bosques tropicales</b></p>
-      </div>
-    </div>
-    <div class="carousel-item" style="height: 45vh">
-      <img src="imagenes/rios.jpg" class="d-block w-120" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5><b>Río de Janeiro</b></h5>
-        <p><b>Es una enorme ciudad costera de Brasil, famosa por sus playas de Copacabana e Ipanema, la estatua del Cristo Redentor</b></p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</div>
-
-<!--INICIO DE CARDS -->
- <section class="container mt-5 pt-5 ">    
-  <div class="card-group">
-    <div class="card">
-      <img src="imagenes/playa1.jpg" class="card-img-top img-fluid" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Times Square</h5>
-        <p class="card-text">Es una intersección de avenidas en Manhattan. Antes llamada Plaza Longacre, está situada en la esquina de la avenida Broadway y la Séptima Avenida.</p>
-        <a href="#" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="imagenes/hd1.jpg" class="card-img-top img-fluid"  alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Noruega</h5>
-        <p class="card-text">Noruega es un país escandinavo que incluye montañas, glaciares y profundos fiordos costeros. Oslo, su capital, es una ciudad de áreas verdes y museos.</p>
-        <a href="#" class="btn btn-primary btn-lg " tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="imagenes/city.jpg" class="card-img-top img-fluid" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">New York</h5>
-        <p class="card-text">Un distrito densamente poblado que se encuentra entre los principales centros comerciales, financieros y culturales del mundo.</p>
-    <a href="index.html" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </div> 
 
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+    <!-- FIN MENU -->
+    
+    <!-- SECCIÓN 1 -->
+   
+      <div class="row flex-items-xs-center slider-1 flex-items-xs-middle" id="sec-1" >
+        <div class="row">
+          <div class="col-xs-12">
+            <div id="carouselExampleDark" class="carousel carousel-white slide" data-bs-ride="carousel" >
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="height: 100vh" >
+                  <img src="img/times3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>Primera Imagen del Slide</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum pariatur laudantium, in, sed ipsum magnam impedit rem earum deserunt et possimus consequatur placeat inventore corrupti dignissimos suscipit eos quia doloribus.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" style="height: 100vh">
+                  <img src="img/hd2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>Segunda Imagen del Slide</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut veritatis dicta soluta enim, modi dolorem hic minima officiis est, esse dolore animi totam, cumque eligendi accusamus atque perferendis et odit!</p>
+                  </div>
+                </div>
+                <div class="carousel-item" style="height: 100vh">
+                  <img src="img/hd3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>Tercera Imagen del Slide</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, fugit laborum saepe assumenda modi rem quidem commodi ea temporibus ducimus dignissimos iusto mollitia corporis alias autem ex deserunt possimus laboriosam.</p>
+                  </div>
+                </div>
+              </div>               
+            </div>       
+
+            </div>   
+      </div>
+    </div>
+  
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 2 -->
+        <div class="container-fluid">
+          <div class="row flex-items-xs-center slider-2 flex-items-xs-middle" id="sec-2" >
+            <div class="row">
+              <div class="col-xs-12"><h1>Atracciones destacadas</h1>          
+                <section class="container mt-5 pt-5 ">    
+                  <div class="card-group">
+                    <div class="card" style="background-color:white">
+                      <img src="img/city.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title" style="color: black">Times Square</h5>
+                    <p class="card-text" style="color: black">Es una intersección de avenidas en Manhattan. Antes llamada Plaza Longacre, está situada en la esquina de la avenida Broadway y Avenida.</p>
+                    <a href="#" class="btn btn-danger btn-lg " tabindex="-1" role="button" aria-disabled="true">Ver más</a>
+                  </div>
+                </div>
+                <div class="card" style="background-color:white">
+                  <img src="img/hd1.jpg" class="card-img-top img-fluid"  alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: black">Noruega</h5>
+                    <p class="card-text" style="color: black">Es un país escandinavo que incluye montañas, glaciares y profundos fiordos costeros. Oslo, su capital, es una ciudad de áreas verdes y museos.</p>
+                    <a href="#" class="btn btn-danger btn-lg " tabindex="-1" role="button" aria-disabled="true">Ver más</a>
+                  </div>
+                </div>
+                <div class="card" style="background-color:white">
+                  <img src="img/playa1.jpg" class="card-img-top img-fluid" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color: black;">New York</h5>
+                    <p class="card-text" style="color: black;">Un distrito densamente poblado que se encuentra entre los principales centros comerciales, financieros y culturales del mundo.</p>
+                <a href="index.html" class="btn btn-danger btn-lg" tabindex="-1" role="button" aria-disabled="true">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </section>  
+          
+          </div>
+       
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 3 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-3 flex-items-xs-middle" id="sec-3" >
+        <div class="row">
+          <div class="col-xs-12">         
+              <div class="row">
+                <div class="col-md-12"> 
+                    <br>           
+     <h1>Avenida Nueva Providencia 1363 - Buenos Aires</h1>
+                  <p>Nuestro horario de Atención <br>
+      Lunes a Viernes de 8:30 - 18:00 Hrs.<br>
+      claudio.mandujano@gmail.com<br>      
+      1125730014
+                              
+                           <div class="col-md-12 text-center wp4">  
+                            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=torre%20eifel+(Empresa)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>                            
+                              <h2>Sucursales</h2>
+                  <p><a href="#"> Paris / Buenos Aires / Nueva York / Barcelona / Ámsterdan / Rio de Janeiro</a></p>
+                              </div>
+                              
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 4 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-4 flex-items-xs-middle" id="sec-4" >
+        <div class="row">
+          <div class="col-xs-12"><h1>FORMULARIO DE CONTACTO</h1>
+            <form action=""> 
+                <div class="form-group row">
+                  <label class="col-2 col-form-label" for="">Nombre</label>
+                  <input type="text" placeholder="Escribe tu nombre" class="form-control col-8">  
+                  </div>
+                  <div class="form-group row">
+                  <label for="" class="col-2 col-form-label">Apellido</label>
+                  <input type="text" placeholder="Escribe tu Apellido" class="form-control col-8">  
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-2 col-form-label">Email</label>
+                    <input type="email" placeholder="Email" class="form-control col-10">  
+                    </div>
+                    <div class="form-group row">                      
+                      <textarea name="textarea" rows="8" cols="80" placeholder="Escriba alguna sugerencia"></textarea>
+                      </div>
+                  <div class="d-flex flex-row justify-content-around">
+                  <button type="submit" class="btn btn-danger ">Enviar</button>
+                  <button type="reset" class="btn btn-danger  ">Restablecer</button>
+                  </div>
+            </form>
+          </div>         
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+    
+    <!-- FOOTER -->
+    <div class="container-fluid footer">
+      <div><h6>Desarrollado por Claudio Mandujano</a></h6></div>
+    </div>
+    <!-- FIN FOOTER -->
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
 </html>
